@@ -56,8 +56,8 @@ void Robot::TeleopPeriodic() {
 	//std::cout<<"\tskewed move = "<<move<<"\tskewed turn = "<<turn;
 
 	// scale the values based on the max allowed speed
-	move *= 1;
-	turn *= 1;
+	move *= 0.2;
+	turn *= 0.2;
 
 	// write to motors
 	talon_left_enc->Set(ControlMode::PercentOutput,  move+turn);
